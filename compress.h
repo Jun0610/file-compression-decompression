@@ -1,0 +1,13 @@
+long countChar(FILE * in, int * count);
+char ** buildEncodedTable(TreeNode * root);
+void buildEncodedTableHelper(TreeNode * root, char * encodedChar, char charToAdd, char ** encodedTable, int encoded_length, int * str_length);
+char * compressText(char ** encodedTable, FILE * in);
+void writeCompressedBits(char ** encodedTable, FILE * in, FILE * out);
+int addOneToByte (int byte_index, int cur_byte);
+void writeBinaryHuffmanTopology(TreeNode * root, FILE * out, int * cur_byte, int * byte_index, long * topologySize);
+int addCharToByte(FILE * out, int cur_byte, int * byte_index, int charToAdd);
+void delEncodedTable(char ** encodedTable);
+void displayCompression(long compressedSize, long uncompressedSize);
+void checkCompression(FILE * in, FILE * out);
+TreeNode * buildHuffmanTree(ListNode * head);
+void createCompressedFile(char * fileName, char * toReturn);
