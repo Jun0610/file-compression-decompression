@@ -100,6 +100,7 @@ int main(int argc, char * argv[]) {
     fseek(compressed, 0, SEEK_SET);
     fwrite(&topologySize, sizeof(long), 1, compressed);
 
+    //display results of compression
     displayCompression(compressedSize, uncompressedSize);   
 
 
@@ -112,21 +113,10 @@ int main(int argc, char * argv[]) {
     return EXIT_SUCCESS;
 
     #endif
-
-
-    
-    // long count[256] = {0};
-    // decodeCodingTree(huffmanRoot, compressed, decoded, count);
-
-
-    // displayCompression(compressedSize, uncompressedSize);       
+ 
 
     #ifdef DECOMPRESS
 
-    // if (argc != 2) {
-    //     fprintf(stderr, "Please input the name of the compressed file.\n");
-    //     return EXIT_FAILURE;
-    // }
 
     if (verifyCompressedFile(argv[1]) != 0) {
         fprintf(stderr, "File must be of type .cmp!\n");
@@ -169,9 +159,17 @@ int main(int argc, char * argv[]) {
         return EXIT_FAILURE;
     }
 
+
+    //decompress compressed bits by traversing huffman tree
     decompress(huffmanRoot, compressed, restore, uncompressedSize);
     long compressedSize = ftell(compressed);
+
+    //display results of decompression
     displayDecompression(uncompressedSize, compressedSize);
+
+    fclose(compressed);
+    fclose(restore);
+    delTree(huffmanRoot);
 
     #endif
 
