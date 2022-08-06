@@ -36,6 +36,8 @@ To decompress the ```.cmp``` file, run the following command:
 
 The decompressed file, ```fileName.dcmp``` should now be in your working directory.
 
+A sample text file ```pride_and_prejudice``` has been included for your convenience.
+
 To remove the executable files and all ```.cmp``` and ```.dcmp``` files, run:
 ```bash
 make clean
