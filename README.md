@@ -47,7 +47,7 @@ Since huffman coding revolves around bit manipulation, the compression/decompres
 From testing, huffman coding seems to be the most effective with text files.
 
 ## License
-[MIT License]()
+[MIT License](https://github.com/Jun0610/text-compression-decompression/blob/main/LICENSE)
 
 ## Author
 Jun Shern Lim  
