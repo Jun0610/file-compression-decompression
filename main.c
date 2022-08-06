@@ -12,10 +12,10 @@ int main(int argc, char * argv[]) {
 
     #ifdef COMPRESS
 
-    // if (argc != 2) {
-    //     fprintf(stderr, "Please input the name of the file to be compressed.\n");
-    //     return EXIT_FAILURE;
-    // }
+    if (argc != 2) {
+        fprintf(stderr, "Please input the name of the file to be compressed.\n");
+        return EXIT_FAILURE;
+    }
 
     int ascii_count[ASCII_SIZE] = {0};    //array of count of ASCII characters
     long uncompressedSize; //uncompressed file size
@@ -117,6 +117,10 @@ int main(int argc, char * argv[]) {
 
     #ifdef DECOMPRESS
 
+    if (argc != 2) {
+        fprintf(stderr, "Please input the name of the compressed file.\n");
+        return EXIT_FAILURE;
+    }
 
     if (verifyCompressedFile(argv[1]) != 0) {
         fprintf(stderr, "File must be of type .cmp!\n");
