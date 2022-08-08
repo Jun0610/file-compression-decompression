@@ -44,9 +44,9 @@ make clean
 ```
 
 ## Additional Notes
-Since huffman coding revolves around bit manipulation, the compression/decompression software can technically be used to compress all file formats eg, .pdf, .docx, .png, etc (since all files are simply a string of bits). However, its effectiveness on these additional file formats is not guranteed.  
+1. Since huffman coding revolves around bit manipulation, the compression/decompression software can technically be used to compress all file formats eg, .pdf, .docx, .png, etc (since all files are simply a string of bits). However, its effectiveness on these additional file formats is not guranteed. From testing, huffman coding seems to be the most effective with text files.
 
-From testing, huffman coding seems to be the most effective with text files.
+2. All testing was done on an ARM64 chip.
 
 ## License
 [MIT License](https://github.com/Jun0610/text-compression-decompression/blob/main/LICENSE)
