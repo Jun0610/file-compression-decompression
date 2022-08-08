@@ -2,7 +2,7 @@
 Text File (De)Compressor is a ```C program``` used to compress and decompress text files with [huffman coding](https://en.wikipedia.org/wiki/Huffman_coding#Applications).
 
 ## Compilation 
-First, ensure your computer can is able to compile ```C programs``` and handle ```Makefile``` commands.
+First, ensure your computer can compile ```C programs``` and handle ```Makefile``` commands in the terminal.
 
 **For Mac Users:** ensure [Xcode Command Line Tools](https://macpaw.com/how-to/install-command-line-tools) are installed before proceeding. 
 
