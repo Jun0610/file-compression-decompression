@@ -152,7 +152,10 @@ void buildEncodedTableHelper(TreeNode * root, char * encodedChar, char charToAdd
 
         //the latest value of encodedChar must be removed (sort of like backtracking)
         //eg: if g : 00, we need to remove the second 0 before returning to parent ndoe in tree
-        encodedChar[encoded_length - 1] = '\0';
+        if (encoded_length >= 1) {
+            encodedChar[encoded_length - 1] = '\0';
+        }
+        
         
         //the index must also be decremented
         *index -= 1;
@@ -166,7 +169,9 @@ void buildEncodedTableHelper(TreeNode * root, char * encodedChar, char charToAdd
 
     //the latest value of encodedChar must be removed (sort of like backtracking)
     //must be done for leaf nodes and non leaf nodes
-    encodedChar[encoded_length - 1] = '\0';
+    if (encoded_length >= 1) {
+            encodedChar[encoded_length - 1] = '\0';
+    }
 
     //the index must also be decremented
     *index -= 1;
