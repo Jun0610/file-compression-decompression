@@ -60,5 +60,5 @@ make clean
 ## Author
 Jun Shern Lim  
 lim321@purdue.edu  
-Computer Engineering '24   
+Computer Science '24   
 Purdue University
